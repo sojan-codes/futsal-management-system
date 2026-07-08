@@ -1,0 +1,50 @@
+[
+  {
+    "id": "court-1",
+    "name": "Champions Arena",
+    "location": "Lalitpur, Nepal",
+    "price": 1800,
+    "availability": "Available",
+    "rating": 4.9,
+    "image": "https://images.unsplash.com/photo-1575361204480-aadea25e6e68?auto=format&fit=crop&w=1200&q=80",
+    "description": "A premium indoor futsal court with pro-grade turf, LED lighting, climate-friendly ventilation, and match-day sound.",
+    "facilities": ["5v5 Turf", "Floodlights", "Locker Rooms", "Parking", "Cafe"],
+    "slots": ["06:00", "08:00", "10:00", "15:00", "17:00", "19:00"]
+  },
+  {
+    "id": "court-2",
+    "name": "Velocity Futsal Hub",
+    "location": "Kathmandu, Nepal",
+    "price": 1500,
+    "availability": "Few Slots",
+    "rating": 4.7,
+    "image": "https://images.unsplash.com/photo-1551958219-acbc608c6377?auto=format&fit=crop&w=1200&q=80",
+    "description": "Fast turf, sharp markings, and a social lounge built for leagues, teams, and weekend groups.",
+    "facilities": ["Synthetic Turf", "Scoreboard", "Showers", "First Aid", "Team Lounge"],
+    "slots": ["07:00", "09:00", "13:00", "18:00", "20:00"]
+  },
+  {
+    "id": "court-3",
+    "name": "Greenline Sports Complex",
+    "location": "Bhaktapur, Nepal",
+    "price": 1300,
+    "availability": "Available",
+    "rating": 4.6,
+    "image": "https://images.unsplash.com/photo-1522778119026-d647f0596c20?auto=format&fit=crop&w=1200&q=80",
+    "description": "A clean community-first venue with bright courts, training sessions, and flexible booking hours.",
+    "facilities": ["Outdoor Turf", "Training Cones", "Water Station", "Parking"],
+    "slots": ["06:30", "11:00", "14:00", "16:00", "21:00"]
+  },
+  {
+    "id": "court-4",
+    "name": "Elite Five Grounds",
+    "location": "Pokhara, Nepal",
+    "price": 2200,
+    "availability": "Booked Today",
+    "rating": 4.8,
+    "image": "https://images.unsplash.com/photo-1518604666860-9ed391f76460?auto=format&fit=crop&w=1200&q=80",
+    "description": "Tournament-ready surface, spectator seating, clean amenities, and premium evening slots.",
+    "facilities": ["Tournament Turf", "Bleachers", "Changing Rooms", "CCTV", "Cafe"],
+    "slots": ["08:00", "12:00", "15:00", "19:30"]
+  }
+]

@@ -1,0 +1,6 @@
+[
+  { "id": "USR-001", "name": "Aarav Sharma", "email": "aarav@example.com", "phone": "+977 9800000001", "role": "Member", "status": "Active" },
+  { "id": "USR-002", "name": "Nisha Tamang", "email": "nisha@example.com", "phone": "+977 9800000002", "role": "Member", "status": "Active" },
+  { "id": "USR-003", "name": "Sujan Rai", "email": "sujan@example.com", "phone": "+977 9800000003", "role": "Organizer", "status": "Suspended" },
+  { "id": "USR-004", "name": "Admin Manager", "email": "admin@futsalpro.test", "phone": "+977 9800000004", "role": "Admin", "status": "Active" }
+]

@@ -1,0 +1,5 @@
+[
+  { "id": "PAY-601", "bookingId": "BK-1001", "method": "eSewa", "amount": 3600, "status": "Completed" },
+  { "id": "PAY-602", "bookingId": "BK-1002", "method": "Khalti", "amount": 1500, "status": "Completed" },
+  { "id": "PAY-603", "bookingId": "BK-1003", "method": "Card", "amount": 1300, "status": "Refunded" }
+]

@@ -1,0 +1,20 @@
+{
+  "summary": {
+    "users": 1280,
+    "courts": 18,
+    "bookings": 842,
+    "revenue": 2240000
+  },
+  "monthlyRevenue": [120000, 180000, 210000, 260000, 310000, 360000],
+  "popularCourts": [
+    { "name": "Champions Arena", "bookings": 248 },
+    { "name": "Velocity Futsal Hub", "bookings": 196 },
+    { "name": "Greenline Sports Complex", "bookings": 154 }
+  ],
+  "paymentSplit": [
+    { "method": "eSewa", "value": 44 },
+    { "method": "Khalti", "value": 28 },
+    { "method": "Cash", "value": 18 },
+    { "method": "Card", "value": 10 }
+  ]
+}
