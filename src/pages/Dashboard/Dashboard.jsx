@@ -15,14 +15,14 @@ export default function Dashboard() {
         <StatCard icon={<FiXCircle />} label="Cancelled" value="1" />
         <StatCard icon={<FiCreditCard />} label="Payments" value="NPR 28k" />
       </div>
-      <div className="dashboard-grid">
+      <div className="dashboard-grid mt-15">
         <div className="panel">
           <h3>Recent Bookings</h3>
-          <div className="booking-list">{bookings.slice(0, 3).map((booking) => <BookingCard booking={booking} key={booking.id} />)}</div>
+          <div className="booking-list mt-8">{bookings.slice(0, 3).map((booking) => <BookingCard booking={booking} key={booking.id} />)}</div>
         </div>
-        <div className="panel">
+        <div className="panel ">
           <h3>Quick Actions</h3>
-          <div className="action-stack">
+          <div className="action-stack mt-5">
             <Button to="/courts">Book Court</Button>
             <Button to="/booking-history" variant="secondary">View History</Button>
             <Button to="/profile" variant="ghost">Profile</Button>

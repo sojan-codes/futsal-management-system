@@ -14,9 +14,9 @@ export default function AdminDashboard() {
         <StatCard icon={<FiCalendar />} label="Bookings" value={reports.summary.bookings} />
         <StatCard icon={<FiDollarSign />} label="Revenue" value={`NPR ${reports.summary.revenue.toLocaleString()}`} />
       </div>
-      <div className="dashboard-grid">
+      <div className="dashboard-grid mt-8">
         <div className="panel"><h3>Monthly Revenue</h3><div className="bar-chart">{reports.monthlyRevenue.map((value) => <span key={value} style={{ height: `${value / 5000}px` }} />)}</div></div>
-        <div className="panel"><h3>Recent Bookings</h3><div className="table-wrap"><table><tbody>{bookings.map((booking) => <tr key={booking.id}><td>{booking.id}</td><td>{booking.court}</td><td><Badge>{booking.status}</Badge></td></tr>)}</tbody></table></div></div>
+        <div className="panel"><h3>Recent Bookings</h3><div className="table-wrap mt-5"><table><tbody >{bookings.map((booking) => <tr key={booking.id}><td>{booking.id}</td><td>{booking.court}</td><td><Badge>{booking.status}</Badge></td></tr>)}</tbody></table></div></div>
       </div>
     </AdminLayout>
   );

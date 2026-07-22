@@ -29,7 +29,7 @@ export default function Signup() {
     <section className="auth-page">
       <form className="auth-card" onSubmit={submit}>
         <p className="eyebrow">Join FutsalPro</p>
-        <h1>Create Account</h1>
+        <h1 className="text-3xl font-bold">Create Account</h1>
         <TextInput label="Full Name" value={values.fullName} error={errors.fullName} onChange={(event) => setValues({ ...values, fullName: event.target.value })} />
         <TextInput label="Email" type="email" value={values.email} error={errors.email} onChange={(event) => setValues({ ...values, email: event.target.value })} />
         <TextInput label="Phone Number" value={values.phone} error={errors.phone} onChange={(event) => setValues({ ...values, phone: event.target.value })} />
@@ -37,8 +37,8 @@ export default function Signup() {
         <TextInput label="Confirm Password" type="password" value={values.confirm} error={errors.confirm} onChange={(event) => setValues({ ...values, confirm: event.target.value })} />
         <label className="checkbox-line"><input type="checkbox" checked={values.agree} onChange={(event) => setValues({ ...values, agree: event.target.checked })} /> I agree to the booking terms</label>
         {errors.agree && <small className="field-error">{errors.agree}</small>}
-        <Button type="submit">Create Account</Button>
-        <p className="auth-switch">Already have account? <Link to="/login">Login</Link></p>
+        <Button type="submit" className="mt-4">Create Account</Button>
+        <p className="auth-switch mt-8">Already have account? <Link to="/login">Login</Link></p>
       </form>
     </section>
   );

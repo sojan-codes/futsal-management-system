@@ -28,15 +28,13 @@ export default function Login() {
     <section className="auth-page">
       <form className="auth-card" onSubmit={submit}>
         <p className="eyebrow">Welcome Back</p>
-        <h1>Login</h1>
-        <Alert type="info">Use any email. Include "admin" in the email to preview admin routes.</Alert>
+        <h1 className="text-3xl font-bold">Login</h1>
         <TextInput label="Email" type="email" value={values.email} error={errors.email} onChange={(event) => setValues({ ...values, email: event.target.value })} placeholder="you@example.com" />
         <TextInput label="Password" type="password" value={values.password} error={errors.password} onChange={(event) => setValues({ ...values, password: event.target.value })} placeholder="Minimum 6 characters" />
         <div className="form-row"><label><input type="checkbox" checked={values.remember} onChange={(event) => setValues({ ...values, remember: event.target.checked })} /> Remember me</label><Link to="/forgot-password">Forgot Password?</Link></div>
         <Button type="submit" icon={<FiLock />}>Login</Button>
         <button className="social-btn" type="button"><FcGoogle /> Continue with Google</button>
-        <button className="social-btn" type="button"><FiFacebook /> Continue with Facebook</button>
-        <p className="auth-switch">No account? <Link to="/signup">Create one</Link></p>
+        <p className="auth-switch mt-8">No account? <Link to="/signup">Create one</Link></p>
       </form>
     </section>
   );

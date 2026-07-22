@@ -17,7 +17,7 @@ export default function Home() {
         <motion.div className="hero-content" initial={{ opacity: 0, y: 36 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.7 }}>
           <div className="trusted-badge"><FiCheckCircle /> Trusted by 18 premium venues</div>
           <p className="eyebrow">Premium Futsal Booking Platform</p>
-          <h1>Book elite futsal courts with match-day confidence.</h1>
+          <h1 className='font-[bebas-neue]'>Book elite futsal courts with match-day confidence.</h1>
           <p>Discover high-quality venues, reserve prime slots, and manage every booking inside a polished sports platform built for players and operators.</p>
           <div className="hero-actions">
             <Button to="/courts" icon={<FiCalendar />}>Book Now</Button>

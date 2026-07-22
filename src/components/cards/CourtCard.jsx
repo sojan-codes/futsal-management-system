@@ -1,4 +1,4 @@
-import { motion } from 'framer-motion';
+import { color, motion } from 'framer-motion';
 import { FiHeart, FiMapPin, FiStar } from 'react-icons/fi';
 import Button from '../buttons/Button';
 import Badge from '../common/Badge';
@@ -15,7 +15,7 @@ export default function CourtCard({ court }) {
       <div className="court-card-body">
         <div className="card-title-row">
           <h3>{court.name}</h3>
-          <span className="rating"><FiStar /> {court.rating}</span>
+          <span className="rating mr-8"><FiStar /> {court.rating}</span>
         </div>
         <p><FiMapPin /> {court.location}</p>
         <div className="mini-chip-row">{court.facilities.slice(0, 3).map((item) => <span key={item}>{item}</span>)}</div>
