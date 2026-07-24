@@ -22,13 +22,13 @@ export default function Payment() {
         <div className="panel">
           {message && <Alert>{message}</Alert>}
           <h3>Payment Method</h3>
-          <div className="payment-grid">{['eSewa', 'Khalti', 'Cash', 'Card'].map((item) => <PaymentCard key={item} method={item} active={method === item} onClick={() => setMethod(item)} />)}</div>
+          <div className="payment-grid">{['FonePay', 'Cash'].map((item) => <PaymentCard key={item} method={item} active={method === item} onClick={() => setMethod(item)} />)}</div>
           <Button onClick={pay} disabled={!booking}>Pay Now</Button>
         </div>
-        <aside className="summary-card">
+        <aside className="summary-card flex flex-col gap-2">
           <h3>Payment Summary</h3>
           {booking ? <><p>{booking.id}</p><p>{booking.court_name}</p><p>{booking.date} · {booking.time}</p><strong>NPR {Number(booking.amount).toLocaleString()}</strong></> : <p>No unpaid booking is available.</p>}
-          <span>Selected: {method}</span>
+          <span> Selected: {method}</span>
         </aside>
       </div>
     </section>
