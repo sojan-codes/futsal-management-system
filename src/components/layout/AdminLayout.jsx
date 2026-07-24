@@ -3,13 +3,13 @@ import { FiBarChart2, FiCalendar, FiGrid, FiHome, FiLogOut, FiUsers } from 'reac
 import { useAuth } from '../../context/AuthContext';
 
 export default function AdminLayout({ title, children }) {
-  const { logout } = useAuth();
+  const { logout, user } = useAuth();
   return (
     <div className="admin-shell">
       <aside className="admin-sidebar">
         <NavLink className="logo" to="/"><FiGrid /> FutsalPro</NavLink>
         <NavLink to="/admin"><FiHome /> Dashboard</NavLink>
-        <NavLink to="/admin/users"><FiUsers /> Users</NavLink>
+        {user?.role === 'admin' && <NavLink to="/admin/users"><FiUsers /> Users</NavLink>}
         <NavLink to="/admin/courts"><FiGrid /> Courts</NavLink>
         <NavLink to="/admin/bookings"><FiCalendar /> Bookings</NavLink>
         <NavLink to="/admin/reports"><FiBarChart2 /> Reports</NavLink>
@@ -18,7 +18,7 @@ export default function AdminLayout({ title, children }) {
       <section className="admin-content">
         <div className="admin-topbar">
           <div>
-            <span>Admin Console</span>
+            <span>{user?.role === 'admin' ? 'Super Admin Console' : 'Futsal Admin Console'}</span>
             <h1>{title}</h1>
           </div>
         </div>

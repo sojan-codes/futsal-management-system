@@ -19,7 +19,7 @@ export default function CourtCard({ court }) {
         </div>
         <p><FiMapPin /> {court.location}</p>
         <div className="mini-chip-row">{court.facilities.slice(0, 3).map((item) => <span key={item}>{item}</span>)}</div>
-        <strong>NPR {court.price.toLocaleString()} / hour</strong>
+        <strong>NPR {Number(court.price).toLocaleString()} / hour</strong>
         <div className="card-actions">
           <Button to={`/booking/${court.id}`} variant="primary">Book Now</Button>
           <Button to={`/courts/${court.id}`} variant="ghost">View Details</Button>

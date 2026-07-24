@@ -38,7 +38,7 @@ export default function Navbar() {
         <a href="#contact" onClick={close}>Contact</a>
         {user ? (
           <>
-            <NavLink to={user.role === 'admin' ? '/admin' : '/dashboard'} onClick={close}>Dashboard</NavLink>
+            <NavLink to={user.is_admin_console ? '/admin' : '/dashboard'} onClick={close}>Dashboard</NavLink>
             <NavLink to="/profile" onClick={close}>Profile</NavLink>
             <Button variant="ghost" onClick={handleLogout}>Logout</Button>
           </>

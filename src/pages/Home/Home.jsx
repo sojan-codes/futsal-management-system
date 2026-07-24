@@ -1,11 +1,14 @@
 import { motion } from 'framer-motion';
+import { useEffect, useState } from 'react';
 import { FiArrowDown, FiArrowRight, FiCalendar, FiCheckCircle, FiShield, FiStar, FiTrendingUp, FiUsers } from 'react-icons/fi';
 import Button from '../../components/buttons/Button';
 import CourtCard from '../../components/cards/CourtCard';
 import StatCard from '../../components/cards/StatCard';
-import courts from '../../data/courts.json';
+import { getCourts } from '../../services/courtService';
 
 export default function Home() {
+  const [courts, setCourts] = useState([]);
+  useEffect(() => { getCourts().then(({ data }) => setCourts(data.results || data)).catch(() => setCourts([])); }, []);
   return (
     <>
       <section className="hero" id="top">
@@ -46,7 +49,7 @@ export default function Home() {
         {[
           ['Instant slot discovery', 'Browse availability, pricing, ratings, and facilities with no clutter.'],
           ['Match-ready dashboards', 'Players and admins get clean views for bookings, payments, and reports.'],
-          ['Backend-ready structure', 'Services are abstracted so API integration can land cleanly later.'],
+          ['Secure bookings', 'Availability and reservation data are powered by the live booking service.'],
         ].map(([title, text]) => (
           <article className="glass-card" key={title}>
             {title.includes('Instant') ? <FiTrendingUp /> : title.includes('dashboards') ? <FiShield /> : <FiStar />}
@@ -71,7 +74,7 @@ export default function Home() {
 
       <section className="section">
         <div className="stats-grid">
-          <StatCard icon={<FiCalendar />} label="Monthly bookings" value="840+" note="Mock platform data" />
+          <StatCard icon={<FiCalendar />} label="Available courts" value={courts.length} note="Live venue inventory" />
           <StatCard icon={<FiStar />} label="Average rating" value="4.8" note="From court reviews" />
           <StatCard icon={<FiUsers />} label="Partner venues" value="18" note="Growing network" />
         </div>

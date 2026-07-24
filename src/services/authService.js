@@ -14,3 +14,7 @@ export const requestPasswordReset = async (email) => {
   // TODO: Wire to backend password-reset endpoint.
   return apiClient.post('/auth/forgot-password', { email });
 };
+
+export const resetPassword = async (payload) => apiClient.post('/auth/reset-password', payload);
+
+export const registerFutsalOwner = async (payload) => apiClient.post('/auth/futsal-owner/signup', payload);

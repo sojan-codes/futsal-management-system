@@ -13,6 +13,7 @@ import Payment from './pages/Payment/Payment';
 import Login from './pages/Login/Login';
 import Signup from './pages/Signup/Signup';
 import ForgotPassword from './pages/ForgotPassword/ForgotPassword';
+import ResetPassword from './pages/ResetPassword/ResetPassword';
 import Dashboard from './pages/Dashboard/Dashboard';
 import Profile from './pages/Profile/Profile';
 import AdminDashboard from './pages/AdminDashboard/AdminDashboard';
@@ -20,12 +21,13 @@ import AdminUsers from './pages/AdminUsers/AdminUsers';
 import AdminCourts from './pages/AdminCourts/AdminCourts';
 import AdminBookings from './pages/AdminBookings/AdminBookings';
 import AdminReports from './pages/AdminReports/AdminReports';
+import AdminLogin from './pages/AdminLogin/AdminLogin';
 import NotFound from './pages/NotFound/NotFound';
 
 function ProtectedRoute({ children, adminOnly = false }) {
   const { user } = useAuth();
   if (!user) return <Navigate to="/login" replace />;
-  if (adminOnly && user.role !== 'admin') return <Navigate to="/dashboard" replace />;
+  if (adminOnly && !user.is_admin_console) return <Navigate to="/admin/login" replace />;
   return children;
 }
 
@@ -49,8 +51,10 @@ export default function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/forgot-password" element={<ForgotPassword />} />
+          <Route path="/reset-password" element={<ResetPassword />} />
           <Route path="/dashboard" element={<ProtectedRoute><Dashboard /></ProtectedRoute>} />
           <Route path="/profile" element={<ProtectedRoute><Profile /></ProtectedRoute>} />
+          <Route path="/admin/login" element={<AdminLogin />} />
           <Route path="/admin" element={<ProtectedRoute adminOnly><AdminDashboard /></ProtectedRoute>} />
           <Route path="/admin/users" element={<ProtectedRoute adminOnly><AdminUsers /></ProtectedRoute>} />
           <Route path="/admin/courts" element={<ProtectedRoute adminOnly><AdminCourts /></ProtectedRoute>} />
