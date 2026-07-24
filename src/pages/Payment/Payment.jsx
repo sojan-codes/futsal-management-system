@@ -18,7 +18,7 @@ export default function Payment() {
     <section className="section page">
       <PageHeader eyebrow="Payment" title="Complete your payment" text="Choose a secure demo payment method for your pending booking." />
       <div className="form-layout">
-        <div className="panel">
+        <div className="panel flex flex-col gap-4">
           {message && <Alert>{message}</Alert>}
           <h3>Ready to complete your booking?</h3>
           <p className="muted">Select Pay Now to choose QR payment or request cash-payment verification. Your booking remains secure while we review your proof.</p>

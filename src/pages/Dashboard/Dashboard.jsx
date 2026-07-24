@@ -14,10 +14,10 @@ export default function Dashboard() {
     <section className="section page">
       <PageHeader eyebrow="Dashboard" title="Player control center" text="Track upcoming matches, booking status, and payment activity." />
       <div className="stats-grid">
-        <StatCard icon={<FiCalendar />} label="Upcoming Bookings" value={counts.upcoming} />
-        <StatCard icon={<FiCheckCircle />} label="Completed" value={counts.completed} />
-        <StatCard icon={<FiXCircle />} label="Cancelled" value={counts.cancelled} />
-        <StatCard icon={<FiCreditCard />} label="Payments" value={`NPR ${counts.paid.toLocaleString()}`} />
+        <div className="cursor-pointer"><StatCard icon={<FiCalendar />} label="Upcoming Bookings" value={counts.upcoming}/></div>
+        <div className="cursor-pointer"><StatCard icon={<FiCheckCircle />} label="Completed" value={counts.completed} /></div>
+        <div className="cursor-pointer"><StatCard icon={<FiXCircle />} label="Cancelled" value={counts.cancelled} /></div>
+        <div className="cursor-pointer"><StatCard icon={<FiCreditCard />} label="Total Paid" value={`NPR ${counts.paid.toLocaleString()}`} /></div>
       </div>
       <div className="dashboard-grid mt-15">
         <div className="panel">
