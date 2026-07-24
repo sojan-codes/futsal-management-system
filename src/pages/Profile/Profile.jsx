@@ -6,7 +6,7 @@ export default function Profile() {
   const { user } = useAuth();
   return (
     <section className="section page narrow">
-      <PageHeader eyebrow="Profile" title="Your player profile" text="Frontend-only profile controls ready for future update endpoints." />
+      <PageHeader eyebrow="Profile" title="Your player profile"/>
       <ProfileCard user={user} />
     </section>
   );

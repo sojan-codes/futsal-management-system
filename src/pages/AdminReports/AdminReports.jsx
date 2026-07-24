@@ -12,12 +12,12 @@ export default function AdminReports() {
     <AdminLayout title="Reports">
       <div className="stats-grid">
         <StatCard icon={<FiDollarSign />} label="Revenue" value={`NPR ${Number(summary.revenue).toLocaleString()}`} />
-        <StatCard icon={<FiCalendar />} label="Bookings" value={summary.bookings} />
+        <StatCard icon={<FiCalendar />} label="Bookings" value={summary.bookings} />  
         <StatCard icon={<FiGrid />} label="Popular Courts" value={popularCourts.length} />
         <StatCard icon={<FiBarChart2 />} label="Payment Methods" value={paymentSplit.length} />
       </div>
       <div className="dashboard-grid mt-9">
-        <div className="panel"><h3>Monthly Chart</h3><div className="bar-chart">{monthlyRevenue.map((item) => <span key={item.month} style={{ height: `${Number(item.revenue) / 5000}px` }} />)}</div></div>
+        {/* <div className="panel"><h3>Monthly Chart</h3><div className="bar-chart">{monthlyRevenue.map((item) => <span key={item.month} style={{ height: `${Number(item.revenue) / 5000}px` }} />)}</div></div> */}
         <div className="panel"><h3>Payment Split</h3><div className="donut-chart"><span>{paymentSplit.length}</span></div><div className="chip-list">{paymentSplit.map((item) => <span key={item.payment_method}>{item.payment_method}: NPR {Number(item.amount).toLocaleString()}</span>)}</div></div>
         <div className="panel"><h3>Popular Courts</h3>{popularCourts.map((court) => <div className="report-row" key={court.name}><span>{court.name}</span><strong>{court.bookings_count}</strong></div>)}</div>
       </div>

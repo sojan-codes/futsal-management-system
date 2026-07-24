@@ -35,7 +35,8 @@ export default function Navbar() {
         <NavLink to="/courts" onClick={close}>Courts</NavLink>
         <NavLink to="/bookings" onClick={close}>Bookings</NavLink>
         <NavLink to="/about" onClick={close}>About</NavLink>
-        <a href="#contact" onClick={close}>Contact</a>
+
+        {/* <a href="#contact" onClick={close}>Contact</a> */}
         {user ? (
           <>
             <NavLink to={user.is_admin_console ? '/admin' : '/dashboard'} onClick={close}>Dashboard</NavLink>
